@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>ERP Uygulaması</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0e9d9;
+        }
+        .header {
+            background-color: #bfaa8f;
+            padding: 20px;
+            text-align: center;
+        }
+       .sidebar {
+            width: 250px; /* The width of the sidebar */
+            position: fixed; /* The sidebar is fixed to the left side of the screen */
+            top: 0; /* The sidebar starts from the top of the screen */
+            left: 0; /* The sidebar starts from the left side of the screen */
+            height: 100%; /* The sidebar takes up the whole height of the screen */
+            overflow-x: hidden; /* Hide horizontal scrollbar if any */
+            overflow-y: auto; /* Enable vertical scrollbar if needed */
+            background-color: #d9c6a5;
+            padding: 20px;
+        }
+        .sidebar a {
+            display: block;
+            color: white;
+            padding: 16px;
+            text-decoration: none;
+        }
+
+        .sidebar a:hover {
+  background-color: #bfaa8f;
+}
+
+        .sidebar-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px;
+            color: white;
+        }
+
+        .sidebar-header h3 {
+            font-size: 18px;
+        }
+
+        .sidebar-header button {
+            border: none;
+            outline: none;
+            background-color: transparent;
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .sidebar-menu {
+            list-style-type: none;
+        }
+
+        .sidebar-menu li {
+            display: flex;
+            align-items: center;
+            padding: 10px 20px;
+        }
+
+        .sidebar-menu li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .sidebar-menu li i {
+            margin-right: 10px;
+        }
+
+        .sidebar-menu li:hover {
+            background-color: #b08a6a;
+        }
+
+        .sidebar-submenu {
+            list-style-type: none;
+            display: none; /* initially hidden */
+        }
+
+        .sidebar-submenu li a {
+            padding-left: 40px; /* indent the submenu items */
+        }
+
+        .active > .sidebar-submenu {
+            display: block; /* show the submenu when the parent is active */
+        }
+
+        .main-content {
+            margin-left: 250px; /* leave space for the sidebar */
+            padding: 20px; 
+        }
+
+        .user-panel {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px; 
+        }
+
+        .user-panel h2 {
+            font-size: 24px; 
+        }
+
+        .user-panel button {
+            border-radius: 50%;
+            border: none; 
+            outline:none; 
+            background-color:#8c6b4c; 
+            color:white; 
+            font-size:16px; 
+			padding :10px; 
+			cursor:pointer; 
+			transition :0.3s ease-in-out; 
+			box-shadow :0 2px 5px rgba(0,0,0,0.1); 
+		}
+
+		.user-panel button:hover { 
+			transform :scale(1.1); 
+		}
+
+		.notification { 
+			position :relative; 
+			display :flex; 
+			align-items :center; 
+			justify-content :center; 
+			margin-right :20px; 
+		}
+
+		.notification i { 
+			font-size :20px; 
+			color :#8c6b4c; 
+			cursor :pointer; 
+		}
+
+		.notification span { 
+			position :absolute; 
+			top :-5px; 
+			right :-5px; 
+			width :15px; 
+			height :15px; 
+			border-radius :50%; 
+			background-color :red; 
+			color :white; 
+			font-size :10px; 
+			text-align :center; 
+		}
+
+		.notification-dropdown { 
+			position :absolute; 
+			top :30px; /* below the icon */ right :-10px; /* align with the icon */ width :300px; /* arbitrary width */ height :200px; /* arbitrary height */ background-color :white; box-shadow :0 2px 5px rgba(0,0,0,0.1); overflow-y :auto; display :none; /* initially hidden */ z-index :9999; /* above other elements */ }
+
+		.notification-dropdown ul { list-style-type :none; padding :10px; margin
+				:0; }
+
+		.notification-dropdown li { display :flex; align-items :center; padding
+				:10px; border-bottom :1px solid #f0e9d9; }
+
+		.notification-dropdown li:last-child { border-bottom :none; }
+
+		.notification-dropdown li img { width :40px; height :40px; border-radius
+				:50%; margin-right :10px; }
+
+		.notification-dropdown li p { margin :0; }
+
+		.notification-dropdown li p span { font-weight :bold; }
+
+		.show > .notification-dropdown { display :block; /* show the dropdown
+				when the parent is active */ }
+                .main {
+  margin-left: 270px; /* Add a left margin to the main content to make room for the sidebar (250px + 20px) */
+  background-color: white;
+  padding: 20px;
+}
+
+/* Style the footer */
+.footer {
+  position:absolute; /* The footer is positioned absolutely to the bottom of the screen */
+  bottom:0; /* The footer starts from the bottom of the screen */
+  left:270px; /* The footer starts from the same left position as the main content (250px + 20px) */
+  right:0; /* The footer ends at the right side of the screen */
+  background-color: #bfaa8f;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Responsive layout - makes the sidebar and the main content stack on top of each other instead of next to each other when the screen size is less than or equal to 800px */
+@media (max-width:800px) {
+    .sidebar, .footer {
+        width:auto; /* The width is auto, meaning the sidebar and footer will take up the whole screen when on a smaller screen size */
+        margin-left:auto; /* The margin-left is auto, meaning there will be no space between the sidebar and footer and the left side of the screen when on a smaller screen size */
+        position:relative; /* The position is relative, meaning the sidebar and footer will not overlap with the main content when on a smaller screen size */
+    }
+    .main {
+        margin-left:auto; /* The margin-left is auto, meaning there will be no space between the main content and the left side of the screen when on a smaller screen size */ 
+    }
+}
+
+/* Style the user panel */
+.user-panel {
+    display:flex; /* Use flexbox layout for the user panel items */
+    align-items:center; /* Align the items vertically in the center */
+    justify-content:flex-end; /* Align the items horizontally to the right */
+    margin-right:20px; /* Add some right margin to the user panel */
+}
+
+/* Style the user avatar */
+.user-avatar {
+    width:50px; /* The width of the user avatar image */
+    height:50px; /* The height of the user avatar image */
+    border-radius:50%; /* Make the user avatar image circular */
+    margin-left:10px; /* Add some left margin to the user avatar image */
+}
+
+/* Style the user name */
+.user-name {
+    font-weight:bold; /* Make the user name bold */
+    color:#bfaa8f; /* Use the same color as the header for the user name */
+}
+
+/* Style the notification icon */
+.notification-icon {
+    width:30px; /* The width of the notification icon image */ 
+    height:30px; /* The height of the notification icon image */ 
+    margin-left:10px; /* Add some left margin to the notification icon image */ 
+}
+
+/* Style the message icon */
+.message-icon {
+    width:30px; /* The width of the message icon image */ 
+    height:30px; /* The height of the message icon image */ 
+    margin-left:10px; /* Add some left margin to the message icon image */ 
+}
+.logout-icon {
+     width:30px; 
+     height:30px;
+      margin-left:10px; 
+}
+.message { 
+    display:flex; 
+    align-items:center;  
+    margin-bottom:10px;  
+}
+
+.message-avatar { 
+    width:40px;
+     height:40px; 
+      border-radius:50%;
+}
+
+.message-content { 
+    background-color:#f4f4f4; 
+    border-radius:10px; 
+    padding:10px; 
+    margin-left:10px;
+}
+
+.message-sender { 
+    font-weight:bold; 
+ }
+
+.message-text { 
+    color:#333333;
+ }
+
+.message-user {
+     justify-content:flex-end;
+    }
+
+.message-other { 
+    justify-content:flex-start; 
+}
+        
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <h3>Kullanıcı Adı (Rolü)</h3>
+            <button id="toggle-btn"><i class="fas fa-bars"></i></button>
+        </div>
+        <ul class="sidebar-menu">
+            <li><a href="#"><i class="fas fa-home"></i>Anasayfa</a></li>
+            <li id="talepler"><a href="#"><i class="fas fa-clipboard-list"></i>Talepler</a>
+                <ul class="sidebar-submenu">
+                    <li><a href="talepolustur.html"><i class="fas fa-plus"></i>Talep Oluştur</a></li>
+                    <li><a href="onaylananlar.html"><i class="fas fa-check"></i>Onaylananlar</a></li>
+                    <li><a href="onaybekleyenler.html"><i class="fas fa-hourglass-half"></i>Onay Bekleyenler</a></li>
+                    <li><a href="reddedilenler.html"><i class="fas fa-times"></i>Reddedilenler</a></li>
+                    <li><a href="teklifverilenler.html"><i class="fas fa-handshake"></i>Teklif Verilenler</a></li>
+                    <li><a href="faturalandirilanlar.html"><i class="fas fa-file-invoice"></i>Faturalandırılanlar</a></li>
+                </ul>
+            </li>
+            <li id="depo"><a href="#"><i class="fas fa-warehouse"></i>Depo</a>
+                <ul class="sidebar-submenu">
+                    <li id="sirketler"><a href="#"><i class="fas fa-building"></i>Şirketler</a>
+                        <ul class="sidebar-submenu">
+                            <li><a href="teknoloji.html">AHL Teknoloji</a></li>
+                            <li><a href="doviz.html">Döviz</a></li>
+                            <li><a href="corumgaz.html">ÇorumGaz</a></li>
+                            <li><a href="kuyumculuk.html">Ahlatçı Kuyumculuk</a></li>
+                            <li><a href="enerya.html">Enerya</a></li>
+                            <li><a href="ahlpay.html">AHL Pay</a></li>
+                            <li><a href="yatirim.html">Ahl Yatırım</a></li>
+                            <li><a href="rafineri.html">Rafineri</a></li>
+                            <li><a href="otomotiv.html">Otomotiv</a></li>
+                            <li><a href="gayrimenkul.html">Gayrimenkul</a></li>
+                            <li><a href="hastane.html">Hastane</a></li> 
+                        </ul>
+                    </li>
+                    <li id="kategoriler"><a href="#"><i class="fas fa-tags"></i>Kategoriler</a>
+                        <ul class="sidebar-submenu">
+                            <li><a href="bilgisayar.html">Bilgisayar</a></li>
+                            <li><a href="telefon.html">Telefon</a></li>
+                            <li><a href="kazi.html">Kazı</a></li>
+                            <li><a href="pos.html">Pos</a></li>
+                            <li><a href="olcumaletleri.html">Ölçüm Aletleri</a></li>
+                            <li><a href="donanim.html">Bilgisayar Donanımları</a></li>
+                            <li><a href="cevrebirimleri.html">Bilgisayar Çevre Birimleri</a></li>
+                            <li><a href="agirvasita.html">Ağır Vasıta Araçlar</a></li>
+                            <li><a href="volvo.html">Volvo</a></li>
+                            <li><a href="volkswagen.html">Volkswagen</a></li>
+                            <li><a href="sterilizator.html">Sterilizatörler</a></li>
+                            <li><a href="yataklar.html">Yataklar</a></li>
+                            <li><a href="solunum.html">Solunum Cihazları</a></li>
+                            <li><a href="taniurun.html">Tanı Ürünleri</a></li>
+                            <li><a href="hastaneekipman.html">Hastane Ekipmanları</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="main-content">
+        <div class="user-panel">
+            <h2>ERP Uygulaması</h2>
+            <div class="notification" id="message-btn">
+                <i class="fas fa-envelope"></i>
+                <span>3</span> <!-- number of unread messages -->
+            </div>
+            <div class="notification" id="notification-btn">
+                <i class="fas fa-bell"></i>
+                <span>5</span> <!-- number of unread notifications -->
+            </div>
+            <button id="user-btn"><i class="fas fa-user"></i></button>
+        </div>
+
+        <!-- This is the message dropdown that will show up when the user clicks on the message icon -->
+        <div class="notification-dropdown" id="message-dropdown">
+            <ul>
+                <li>
+                    <img src="user1.jpg" alt="User 1"> <!-- user profile picture -->
+                    <p><span>User 1</span> Merhaba, nasılsın?</p> <!-- user message -->
+                </li>
+                <li>
+                    <img src="user2.jpg" alt="User 2">
+                    <p><span>User 2</span> Talebin onaylandı, tebrikler!</p>
+                </li>
+                <li>
+                    <img src="user3.jpg" alt="User 3">
+                    <p><span>User 3</span> Depodan yeni ürünler geldi, bakmak ister misin?</p>
+                </li>
+            </ul>
+        </div>
+
+        <div class="notification-dropdown" id="notification-dropdown">
+            <ul>
+                <li>
+                    <img src="logo1.png" alt="Logo 1"> 
+                    <p><span>AHL Teknoloji</span> Yeni bir teklif aldınız!</p> 
+                </li>
+                <li>
+                    <img src="logo2.png" alt="Logo 2">
+                    <p><span>Döviz</span> Dolar kuru yükseldi!</p>
+                </li>
+                <li>
+                    <img src="logo3.png" alt="Logo 3">
+                    <p><span>ÇorumGaz</span> Faturanız ödenmemiş!</p>
+                </li>
+                <li>
+                    <img src="logo4.png" alt="Logo 4">
+                    <p><span>Ahlatçı Kuyumculuk</span> Altın fiyatları düştü!</p>
+                </li>
+                <li>
+                    <img src="logo5.png" alt="Logo 5">
+                    <p><span>Enerya</span> Elektrik kesintisi duyurusu!</p>
+                </li>
+            </ul>
+        </div>
+
+        <div class="notification-dropdown" id="user-dropdown">
+            <ul>
+                <li><a href="#"><i class="fas fa-cog"></i>Ayarlar</a></li> <!-- settings option -->
+                <li><a href="#"><i class="fas fa-sign-out-alt"></i>Çıkış Yap</a></li> <!-- logout option -->
+            </ul>
+        </div>
+
+
+        <h1>Layout.cshtml Sayfası</h1>
+        <p>Bu sayfa ERP uygulamasının layout sayfasıdır. Bu sayfada sidebar, kullanıcı paneli ve bildirim kısmı bulunmaktadır. Ayrıca sayfanın renk paleti vintage kahverengi/bej tonlarında oluşturulmuştur.</p>
+        <img src="layout.png" alt="Layout"> 
+    </div>
+
+    <script>
+       
+        var toggleBtn = document.getElementById("toggle-btn");
+        var sidebar = document.getElementById("sidebar");
+        var mainContent = document.getElementById("main-content");
+        var talepler = document.getElementById("talepler");
+        var depo = document.getElementById("depo");
+        var sirketler = document.getElementById("sirketler");
+        var kategoriler = document.getElementById("kategoriler");
+        var messageBtn = document.getElementById("message-btn");
+        var messageDropdown = document.getElementById("message-dropdown");
+        var notificationBtn = document.getElementById("notification-btn");
+        var notificationDropdown = document.getElementById("notification-dropdown");
+        var userBtn = document.getElementById("user-btn");
+        var userDropdown = document.getElementById("user-dropdown");
+        toggleBtn.addEventListener("click", function() {
+            sidebar.classList.toggle("collapsed");
+            mainContent.classList.toggle("expanded");
+        });
+
+        talepler.addEventListener("click", function() {
+            talepler.classList.toggle("active");
+        });
+
+        depo.addEventListener("click", function() {
+            depo.classList.toggle("active");
+        });
+
+        sirketler.addEventListener("click", function() {
+            sirketler.classList.toggle("active");
+        });
+
+        kategoriler.addEventListener("click", function() {
+            kategoriler.classList.toggle("active");
+        });
+
+        messageBtn.addEventListener("click", function() {
+            messageBtn.classList.toggle("show");
+            messageDropdown.classList.toggle("show");
+            notificationBtn.classList.remove("show");
+            notificationDropdown.classList.remove("show");
+            userBtn.classList.remove("show");
+            userDropdown.classList.remove("show");
+        });
+
+        notificationBtn.addEventListener("click", function() {
+            notificationBtn.classList.toggle("show");
+            notificationDropdown.classList.toggle("show");
+            messageBtn.classList.remove("show");
+            messageDropdown.classList.remove("show");
+            userBtn.classList.remove("show");
+            userDropdown.classList.remove("show");
+        });
+
+        userBtn.addEventListener("click", function() {
+            userBtn.classList.toggle("show");
+            userDropdown.classList.toggle("show");
+            messageBtn.classList.remove("show");
+            messageDropdown.classList.remove("show");
+            notificationBtn.classList.remove("show");
+            notificationDropdown.classList.remove("show");
+        });
+    </script>
+</body>
+</html>
