@@ -13,11 +13,9 @@
         <style>
             .topnav-logo{
                 margin-top: 5px;
-            }
-            .navbar-nav{
-                margin-left: -100px;
-
-            }
+            }      
+            
+            
         </style>
 
     </head>
@@ -158,6 +156,7 @@
                     </div>
                     <!-- end Topbar -->
 
+                 
                     <div class="topnav">
                         <div class="container-fluid">
                             <nav class="navbar navbar-dark navbar-expand-lg topnav-menu">
@@ -165,73 +164,92 @@
                                 <div class="collapse navbar-collapse" id="topnav-menu-content">
                                     <ul class="navbar-nav">
                                         <li class="nav-item dropdown">
-                                            <a class="nav-link dropdown-toggle arrow-none" href="#" id="topnav-dashboards" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                <i class="uil-dashboard me-1"></i>Yönetim Paneli <div class="arrow-down"></div>
+                                            <a class="nav-link dropdown-toggle arrow-none" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <i class="uil-dashboard me-1"></i>Yönetim Paneli<div class="arrow-down"></div>
                                             </a>
-                                            <div class="dropdown-menu" aria-labelledby="topnav-dashboards">
+                                            <div class="dropdown-menu">
                                                 <a href="dashboard-analytics.html" class="dropdown-item">Analizler</a>
+                                               
                                                 <a href="dashboard-projects.html" class="dropdown-item">Projeler</a>
                                             </div>
                                         </li>
                                         <li class="nav-item dropdown">
-                                            <a class="nav-link dropdown-toggle arrow-none" href="#" id="topnav-apps" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                <i class="uil-apps me-1"></i>Takvim 
+                                            <a class="nav-link dropdown-toggle arrow-none" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <i class="uil-apps me-1"></i>Uygulamalar <div class="arrow-down"></div>
                                             </a>
-                                            
-                                        </li>
-                                        <li class="nav-item dropdown">
-                                            <a class="nav-link dropdown-toggle arrow-none" href="#" id="topnav-pages" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                <i class="uil-copy-alt me-1"></i>Mesajlaşma 
-                                            </a>                                            
-                                        </li>
-                                        <li class="nav-item dropdown">
-                                            <a class="nav-link dropdown-toggle arrow-none" href="#" id="topnav-components" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                <i class="uil-package me-1"></i>Depo <div class="arrow-down"></div>
-                                            </a>
-                                            <div class="dropdown-menu" aria-labelledby="topnav-components">
+                                            <div class="dropdown-menu">
+                                                <a href="apps-calendar.html" class="dropdown-item">Takvim</a>
+                                                <a href="apps-chat.html" class="dropdown-item">Mesajlaşma</a>
+                                                <div class="dropdown">
+                                                    <a class="dropdown-item dropdown-toggle arrow-none" href="#"  role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                        Depo <div class="arrow-down"></div>
+                                                    </a>
+                                                    <div class="dropdown-menu">
                                                 <a href="apps-ecommerce-products.html" class="dropdown-item">Kategori Ekle</a>
                                                 <a href="apps-ecommerce-products-details.html" class="dropdown-item">Kategori Düzenle</a>
                                                 <a href="apps-ecommerce-orders.html" class="dropdown-item">Ürün Ekle</a>
                                                 <a href="apps-ecommerce-orders-details.html" class="dropdown-item">Ürün Düzenle</a>
+                                                    </div>
+                                                </div>
+                                                <div class="dropdown">
+                                                    <a class="dropdown-item dropdown-toggle arrow-none" href="#"  role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                        Talepler <div class="arrow-down"></div>
+                                                    </a>
+                                                    <div class="dropdown-menu">
+                                                        <a href="apps-email-inbox.html" class="dropdown-item">Talep Yap</a>
+                                                        <a href="apps-email-read.html" class="dropdown-item">Taleplerimi Görüntüle</a>
+                                                    </div>
+                                                </div>
+                                                
                                             </div>
                                         </li>
                                         <li class="nav-item dropdown">
-                                            <a class="nav-link dropdown-toggle arrow-none" href="#" id="topnav-layouts" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                <i class="uil-window me-1"></i>Talepler <div class="arrow-down"></div>
+                                            <a class="nav-link dropdown-toggle arrow-none" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <i class="uil-copy-alt me-1"></i>Talep İşlemleri <div class="arrow-down"></div>
                                             </a>
-                                            <div class="dropdown-menu" aria-labelledby="topnav-layouts">
-                                                <a href="index.html" class="dropdown-item">Talep Yap</a>
-                                                <a href="layouts-detached.html" class="dropdown-item">Taleplerimi Görüntüle</a>
-                                                <a href="layouts-horizontal.html" class="dropdown-item">Onay Bekleyenler</a>
-                                                <a href="layouts-horizontal.html" class="dropdown-item">Onaylananlar</a>
-                                                <a href="layouts-horizontal.html" class="dropdown-item">Reddedilenler</a>
+                                            <div class="dropdown-menu">
+                                                <div class="dropdown">
+                                                    <a class="dropdown-item dropdown-toggle arrow-none" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                        Talepler <div class="arrow-down"></div>
+                                                    </a>
+                                                    <div class="dropdown-menu" >
+                                                        <a href="pages-login.html" class="dropdown-item">Talep Yap</a>
+                                                        <a href="pages-login-2.html" class="dropdown-item">Taleplerimi Görüntüle</a>
+                                                        <a href="pages-register.html" class="dropdown-item">Onay Bekleyenler</a>
+                                                        <a href="pages-register-2.html" class="dropdown-item">Onaylananlar</a>
+                                                        <a href="pages-logout.html" class="dropdown-item">Reddedilenler</a>
+                                                    </div>
+                                                </div>
+                                                <div class="dropdown">
+                                                    <a class="dropdown-item dropdown-toggle arrow-none" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                        Teklifler <div class="arrow-down"></div>
+                                                    </a>
+                                                    <div class="dropdown-menu" >
+                                                        <a href="pages-404.html" class="dropdown-item">Teklif Gir</a>
+                                                        <a href="pages-404-alt.html" class="dropdown-item">Teklifleri Listele</a>
+                                                        <a href="pages-500.html" class="dropdown-item">Mevcut Tedarikçiler</a>
+														<a href="pages-500.html" class="dropdown-item">Tedarikçi Ekle</a>
+                                                    </div>
+                                                </div>                                               
                                             </div>
                                         </li>
                                         <li class="nav-item dropdown">
-                                            <a class="nav-link dropdown-toggle arrow-none" href="#" id="topnav-layouts" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                <i class="uil-window me-1"></i>Teklifler <div class="arrow-down"></div>
+                                            <a class="nav-link dropdown-toggle arrow-none" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <i class="uil-user me-1"></i>Kullanıcı İşlemleri<div class="arrow-down"></div>
                                             </a>
-                                            <div class="dropdown-menu" aria-labelledby="topnav-layouts">
-                                                <a href="index.html" class="dropdown-item">Teklif Gir</a>
-                                                <a href="layouts-detached.html" class="dropdown-item">Teklifleri Listele</a>
-                                                <a href="layouts-horizontal.html" class="dropdown-item">Mevcut Tedarikçiler</a>
-                                                <a href="layouts-horizontal.html" class="dropdown-item">Tedarikçi Ekle</a>
+                                            <div class="dropdown-menu">
+                                                <a href="widgets.html" class="dropdown-item">Kullanıcı Oluştur</a>
+												<a href="widgets.html" class="dropdown-item">Kullanıcıları Görüntüle</a>   
+                                                
                                             </div>
-                                        </li>
-                                        <li class="nav-item dropdown">
-                                            <a class="nav-link dropdown-toggle arrow-none" href="#" id="topnav-layouts" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                <i class="uil-window me-1"></i>Üyelik İşlemleri<div class="arrow-down"></div>
-                                            </a>
-                                            <div class="dropdown-menu" aria-labelledby="topnav-layouts">
-                                                <a href="index.html" class="dropdown-item">Üyelik Oluştur</a>
-                                                <a href="layouts-detached.html" class="dropdown-item">Üyeleri Görüntüle</a>
-                                            </div>
-                                        </li>
+                                        </li>                                        
                                     </ul>
                                 </div>
                             </nav>
                         </div>
                     </div>
+
+                    
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-12">
