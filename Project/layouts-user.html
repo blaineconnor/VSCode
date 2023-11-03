@@ -2,42 +2,26 @@
 <html lang="tr">
     <head>
         <meta charset="utf-8">
-        <title></title>
+        <title>Panel</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
-        <!-- App favicon -->
         <link rel="shortcut icon" href="assets/images/small/favicon.ico">
-        <link href="../Project/assets/css/vendor/dataTables.bootstrap5.css" rel="stylesheet" type="text/css" />
-        <link href="../Project/assets/css/vendor/responsive.bootstrap5.css" rel="stylesheet" type="text/css" />
-        <!-- third party css -->
-        <link href="../Project/assets/css/vendor/jquery-jvectormap-1.2.2.css" rel="stylesheet" type="text/css">
-        <!-- third party css end -->
-
-        <!-- App css -->
-        <link href="../Project/assets/css/icons.min.css" rel="stylesheet" type="text/css">
-        <link href="../Project/assets/css/app.min.css" rel="stylesheet" type="text/css" id="light-style">
-        <link href="../Project/assets/css/app-dark.min.css" rel="stylesheet" type="text/css" id="dark-style">
-
+        <link href="assets/css/vendor/responsive.bootstrap5.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/vendor/dataTables.bootstrap5.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css">
+        <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" id="light-style">
+        <link href="assets/css/app-dark.min.css" rel="stylesheet" type="text/css" id="dark-style">
     </head>
 
     <body class="loading" data-layout="detached" data-layout-config='{"layoutBoxed":false, "leftSidebarCondensed":false, "leftSidebarScrollable":false,"darkMode":false, "showRightSidebarOnStart": true}'></body>
 
-        <!-- Topbar Start -->
         <div class="navbar-custom topnav-navbar topnav-navbar-dark">
             <div class="container-fluid">
-
-                <!-- LOGO -->
                 <a href="index.html" class="topnav-logo">
                     <span class="topnav-logo-lg">
                         <img src="assets/images/navlogo.png" >
-                    </span>
-                    
+                    </span>                    
                 </a>
-
-                <ul class="list-unstyled topbar-menu float-end mb-0">
-
-                   
-            
+                <ul class="list-unstyled topbar-menu float-end mb-0">            
                     <li class="dropdown notification-list topbar-dropdown d-none d-lg-block">
                         <a class="nav-link dropdown-toggle arrow-none" data-bs-toggle="dropdown" id="topbar-languagedrop" href="#" role="button" aria-haspopup="true" aria-expanded="false">
                             <img src="assets/images/flags/turkiye.png" alt="user-image" class="me-1" height="12"> <span class="align-middle">Türkçe</span> <i class="mdi mdi-chevron-down"></i>
@@ -79,11 +63,8 @@
                                         </a>
                                     </span>Bildirimler
                                 </h5>
-                            </div>
-    
-                            <div style="max-height: 230px;" data-simplebar="">
-                                
-                            </div>
+                            </div>  
+                           
     
                             <!-- All-->
                             <a href="javascript:void(0);" class="dropdown-item text-center text-primary notify-item notify-all">
@@ -93,10 +74,11 @@
                         </div>
                     </li>                 
 
-                    <li class="notification-list">
-                        <a class="nav-link end-bar-toggle" href="javascript: void(0);">
-                            <i class="dripicons-gear noti-icon"></i>
-                        </a>
+                    <li class="notification-list mt-3">
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" name="color-scheme-mode" id="lightMode" onclick="lightModeTogle()">
+                            <label class="form-check-label" for="lightMode">Işıklar</label>
+                        </div>
                     </li>
     
                     <li class="dropdown notification-list">
@@ -147,9 +129,6 @@
                 </a>             
             </div>
         </div>
-        <!-- end Topbar -->
-        
-        <!-- Start Content-->
         <div class="container-fluid">
 
             <!-- Begin page -->
@@ -641,57 +620,11 @@
 
             </div> <!-- end wrapper-->
         </div>
-        <!-- END Container -->
-
-
-        <!-- Right Sidebar -->
-        <div class="end-bar">
-
-            <div class="rightbar-title">
-                <a href="javascript:void(0);" class="end-bar-toggle float-end">
-                    <i class="dripicons-cross noti-icon"></i>
-                </a>
-                <h5 class="m-0">Ayarlar</h5>
-            </div>
-
-            <div class="rightbar-content h-100" data-simplebar="">
-
-                <div class="p-3">
-
-                    <div class="form-check form-switch mb-1">
-                        <input class="form-check-input" type="checkbox" name="color-scheme-mode" value="light" id="light-mode-check" checked>
-                        <label class="form-check-label" for="light-mode-check">Açık Mod</label>
-                    </div>
-                    
-                    <div class="form-check form-switch mb-1">
-                        <input class="form-check-input" type="checkbox" name="color-scheme-mode" value="dark" id="dark-mode-check">
-                        <label class="form-check-label" for="dark-mode-check">Koyu Mod</label>
-                    </div>                       
-                </div> 
-
-            </div>
-        </div>
-
-        <div class="rightbar-overlay"></div>
-
-
-        <!-- bundle -->
         <script src="assets/js/vendor.min.js"></script>
         <script src="assets/js/app.min.js"></script>
-
-        <script src="/Dashboard/assets/js/vendor/jquery.dataTables.min.js"></script>
-        <script src="/Dashboard/assets/js/vendor/dataTables.bootstrap5.js"></script>
-        <script src="/Dashboard/assets/js/vendor/dataTables.responsive.min.js"></script>
-        <script src="/Dashboard/assets/js/vendor/responsive.bootstrap5.min.js"></script>
-        <!-- third party js -->
-        <script src="assets/js/vendor/apexcharts.min.js"></script>
-        <script src="assets/js/vendor/jquery-jvectormap-1.2.2.min.js"></script>
-        <script src="assets/js/vendor/jquery-jvectormap-world-mill-en.js"></script>
-        <!-- third party js ends -->
-
-        <!-- demo app -->
-        <script src="assets/js/pages/demo.dashboard.js"></script>
-        <!-- end demo js-->
+        <script src="assets/js/other.js"></script>
+        <script src="assets/js/dataTables.responsive.min.js"></script>
+        <script src="assets/js/responsive.bootstrap5.min.js"></script>
     </body>
     
 </html>
