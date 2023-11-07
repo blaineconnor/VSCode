@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<script src="signalr.min.js"></script>
+<script src="jquery.min.js"></script>
+
+<script>
+    $(document).ready(() => {
+        const connection = new SignalR.HubConnectionBuilder()
+        .withUrl("https://localhost:7214/chathub").build();
+
+        connection.start();
+
+$("#btngonder").click(() => {
+    let message = $("#txtMessage").val();
+    connection.invoke("SendMessage", message).catch(error => console.log(`Mesaj gönderilirken hata oluştu. ${error}`));
+});
+
+    });
+</script>
+
+</head>
+
+<body>
+    <input type="text" id="txtMessage">
+<button id="btngonder">Gönder</button>
+</body>
+</html>
