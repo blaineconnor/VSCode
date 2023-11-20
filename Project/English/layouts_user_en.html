@@ -6,15 +6,15 @@
     <meta charset="utf-8">
     <title>Ahlatcı Technology - Corporate Management System</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="~/assets/css/vendor/responsive.bootstrap5.css" rel="stylesheet" type="text/css">
-    <link href="~/assets/images/favicon.ico" rel="shortcut icon">
-    <link href="~/assets/css/icons.min.css" rel="stylesheet" type="text/css">
-    <link href="~/css/print.css" rel="stylesheet" type="text/css">
-    <link href="~/assets/css/app.min.css" rel="stylesheet" type="text/css" id="light-style" disabled="disabled">
-    <link href="~/assets/css/app-dark.min.css" rel="stylesheet" type="text/css" id="dark-style">
+    <link href="assets/css/vendor/responsive.bootstrap5.css" rel="stylesheet" type="text/css">
+    <link href="assets/images/favicon.ico" rel="shortcut icon">
+    <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css">
+    <link href="css/print.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" id="light-style" disabled="disabled">
+    <link href="assets/css/app-dark.min.css" rel="stylesheet" type="text/css" id="dark-style">
 
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/js/site.js"></script>
+    <script src="lib/jquery/dist/jquery.min.js"></script>
+    <script src="js/site.js"></script>
     <script>
         let CID = `@Repo.Session.CompanyId`;
         let UID = `@Repo.Session.UserId`;
@@ -36,7 +36,7 @@
 
         <a asp-area="Employee" asp-controller="Home" asp-action="Index" class="topnav-logo">
             <span class="topnav-logo-lg">
-                <img src="~/assets/images/navlogo_en_dark.png">
+                <img src="assets/images/navlogo_en_dark.png">
             </span>
             
 
@@ -46,66 +46,28 @@
 
             <li class="dropdown notification-list topbar-dropdown d-none d-lg-block">
                 <a class="nav-link dropdown-toggle arrow-none" data-bs-toggle="dropdown" id="topbar-languagedrop" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-                    <img src="~/assets/images/flags/england.png" alt="user-image" class="me-1" height="12"> <span class="align-middle">English</span> <i class="mdi mdi-chevron-down"></i>
+                    <img src="assets/images/flags/england.jpg" alt="user-image" class="me-1" height="12"> <span class="align-middle">English</span> <i class="mdi mdi-chevron-down"></i>
                 </a>
                 <div class="dropdown-menu dropdown-menu-end dropdown-menu-animated topbar-dropdown-menu" aria-labelledby="topbar-languagedrop">
 
                     <a asp-area="" asp-controller="Null" asp-action="Maintenance_de" class="dropdown-item notify-item">
-                        <img src="~/assets/images/flags/germany.jpg" alt="user-image" class="me-1" height="12"> <span class="align-middle">Deutsch</span>
+                        <img src="assets/images/flags/germany.jpg" alt="user-image" class="me-1" height="12"> <span class="align-middle">Deutsch</span>
                     </a>
 
                     <a asp-area="" asp-controller="Null" asp-action="Maintenance_it" class="dropdown-item notify-item">
-                        <img src="~/assets/images/flags/italy.jpg" alt="user-image" class="me-1" height="12"> <span class="align-middle">L'Italiano</span>
+                        <img src="assets/images/flags/italy.jpg" alt="user-image" class="me-1" height="12"> <span class="align-middle">L'Italiano</span>
                     </a>
 
                     <a asp-area="" asp-controller="Null" asp-action="Maintenance_es" class="dropdown-item notify-item">
-                        <img src="~/assets/images/flags/spain.jpg" alt="user-image" class="me-1" height="12"> <span class="align-middle">Español</span>
+                        <img src="assets/images/flags/spain.jpg" alt="user-image" class="me-1" height="12"> <span class="align-middle">Español</span>
                     </a>
 
                     <a asp-area="" asp-controller="Null" asp-action="Maintenance_en" class="dropdown-item notify-item">
-                        <img src="~/assets/images/flags/turkiye.png" alt="user-image" class="me-1" height="12"> <span class="align-middle">Türkçe</span>
+                        <img src="assets/images/flags/turkiye.png" alt="user-image" class="me-1" height="12"> <span class="align-middle">Türkçe</span>
                     </a>
 
                 </div>
             </li>
-
-           @*  <li class="dropdown notification-list">
-                <a class="nav-link dropdown-toggle arrow-none" data-bs-toggle="dropdown" href="#" id="topbar-notifydrop" role="button" aria-haspopup="true" aria-expanded="false">
-                    <i class="dripicons-bell noti-icon"></i>
-                    <span class="noti-icon-badge"></span>
-                </a>
-                <div class="dropdown-menu dropdown-menu-end dropdown-menu-animated dropdown-lg" aria-labelledby="topbar-notifydrop">
-
-                    <div class="dropdown-item noti-title">
-                        <h5 class="m-0">
-                            <span class="float-end">
-                                <a asp-area="Employee" asp-controller="Home" asp-action="Null" class="text-dark">
-                                    <small>Clean</small>
-                                </a>
-                            </span>Notification
-                        </h5>
-                    </div>
-
-                    <div style="max-height: 230px;" data-simplebar="init">
-                        <div class="simplebar-wrapper" style="margin: 0px;">
-                            <div class="simplebar-height-auto-observer-wrapper"><div class="simplebar-height-auto-observer"></div></div><div class="simplebar-mask">
-                                <div class="simplebar-offset" style="right: 0px; bottom: 0px;">
-                                    <div class="simplebar-content-wrapper" style="height: auto; overflow: hidden;">
-                                        <div class="simplebar-content" style="padding: 0px;">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div><div class="simplebar-placeholder" style="width: 0px; height: 0px;"></div>
-                        </div><div class="simplebar-track simplebar-horizontal" style="visibility: hidden;"><div class="simplebar-scrollbar" style="width: 0px; display: none;"></div></div><div class="simplebar-track simplebar-vertical" style="visibility: hidden;"><div class="simplebar-scrollbar" style="height: 0px; display: none;"></div></div>
-                    </div>
-
-                    <a asp-area="Employee" asp-controller="Home" asp-action="Null" class="dropdown-item text-center text-primary notify-item notify-all">
-                        Show All
-                    </a>
-
-                </div>
-            </li> *@
-
 
             <li class="notification-list mt-3">
                 <div class="form-check form-switch">
@@ -203,37 +165,31 @@
                     </a>
                     <div class="collapse" id="sidebarRequest">
                         <ul class="side-nav-second-level">
-                            @if (Repo.Session.Authority == "Talep" || Repo.Session.Authority == "SuperUser")
-                            {
+                           
                                 <li>
                                     <a asp-area="Employee" asp-controller="Home" asp-action="CreateRequest">
                                         Create Request
                                     </a>
                                 </li>
-                            }
-                            @if (Repo.Session.Authority == "Birim Amiri" || Repo.Session.Authority == "SuperUser")
-                            {
+                            
+                           
                                 <li>
                                     <a asp-area="Employee" asp-controller="Home" asp-action="ApproveRequest">
                                         Approve Request
                                     </a>
                                 </li>
-                            }
-
-                            @if (Repo.Session.Authority == "Talep" || Repo.Session.Authority == "Birim Amiri" || Repo.Session.Authority == "SuperUser")
-                            {
+                           
                                 <li>
                                     <a asp-area="Employee" asp-controller="Home" asp-action="RequestList">
                                         Request List
                                     </a>
                                 </li>
-                            }
+                            
                         </ul>
                     </div>
                 </li>
 
-                @if (Repo.Session.Authority == "Satın Alma" || Repo.Session.Authority == "SuperUser")
-                {
+               
                     <li class="side-nav-item">
                         <a data-bs-toggle="collapse" href="#sidebarOffer" aria-expanded="false"
                            aria-controls="sidebarOffer" class="side-nav-link collapsed">
@@ -243,42 +199,34 @@
                         </a>
                         <div class="collapse" id="sidebarOffer">
                             <ul class="side-nav-second-level">
-                                @if (Repo.Session.Authority == "Satın Alma" || Repo.Session.Authority == "SuperUser")
-                                {
+                                
                                     <li>
                                         <a asp-area="Employee" asp-controller="Home" asp-action="CreateOffer">Add Offer</a>
                                     </li>
-                                }
-                                @if (Repo.Session.Authority == "SuperUser")
-                                {
+                               
                                     <li>
                                         <a asp-area="Employee" asp-controller="Home" asp-action="OfferApproval">Approve Offer</a>
                                     </li>
-                                }
-
-                                @if (Repo.Session.Authority == "Satın Alma" || Repo.Session.Authority == "SuperUser")
-                                {
+                                
                                     <li>
                                         <a asp-area="Employee" asp-controller="Home" asp-action="Supplier">Add Supplier</a>
                                     </li>
-                                }
+                                
                             </ul>
                         </div>
                     </li>
-                }
+                
 
-                @if (Repo.Session.Authority == "Satın Alma" || Repo.Session.Authority == "SuperUser")
-                {
+                
                     <li class="side-nav-item">
                         <a asp-area="Employee" asp-controller="Home" asp-action="ManageStock" class="side-nav-link">
                             <i class="mdi-warehouse mdi"></i>
                             <span> Stock Operations </span>
                         </a>
                     </li>
-                }
+                
 
-                @if (Repo.Session.Authority == "Muhasebe" || Repo.Session.Authority == "SuperUser")
-                {
+               
 
                     <li class="side-nav-title side-nav-item">Accounting Operations</li>
 
@@ -295,11 +243,10 @@
                             <span> Invoices </span>
                         </a>
                     </li>
-                }
+                
 
 
-                @if (Repo.Session.Authority == "Yönetim" || Repo.Session.Authority == "Kurul" || Repo.Session.Authority == "SuperUser")
-                {
+               
                     <li class="side-nav-item">
                         <a asp-area="Employee" asp-controller="Home" asp-action="Reports" class="side-nav-link">
                             <i class="mdi mdi-file-multiple"></i>
@@ -312,7 +259,7 @@
                             <span> Process Reports </span>
                         </a>
                     </li>
-                }
+                
 
                 <li class="side-nav-title side-nav-item">User History</li>
 
@@ -335,7 +282,7 @@
                         <i class="mdi mdi-office-building me-1"></i> Company: @Repo.Session.CompanyName
                     </h5>
                 </div>
-                @RenderBody()
+               
             </div>
             <footer class="footer">
                 <div class="container-fluid">
@@ -356,10 +303,10 @@
     </div>
 </div>
 
-<script src="~/assets/js/vendor.min.js"></script>
-<script src="~/assets/js/app.min.js"></script>
-<script src="~/assets/js/typeahead.bundle.js"></script>
-<script src="~/js/other.js"></script>
+<script src="assets/js/vendor.min.js"></script>
+<script src="assets/js/app.min.js"></script>
+<script src="assets/js/typeahead.bundle.js"></script>
+<script src="js/other.js"></script>
 
 @await RenderSectionAsync("Scripts", required: false)
 

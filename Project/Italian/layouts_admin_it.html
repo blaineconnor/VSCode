@@ -1,4 +1,4 @@
-@using SatinAlmaStokYonetim.Code;
+
 <!DOCTYPE html>
 <html lang="it">
 
@@ -6,15 +6,15 @@
     <meta charset="utf-8">
     <title>Admin - Sistema di Gestione Aziendale</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="~/assets/css/vendor/responsive.bootstrap5.css" rel="stylesheet" type="text/css">
-    <link href="~/assets/images/favicon.ico" rel="shortcut icon">
-    <link href="~/assets/css/vendor/jquery-jvectormap-1.2.2.css" rel="stylesheet" type="text/css">
-    <link href="~/assets/css/icons.min.css" rel="stylesheet" type="text/css">
-    <link href="~/assets/css/app.min.css" rel="stylesheet" type="text/css" id="light-style" disabled="disabled">
-    <link href="~/assets/css/app-dark.min.css" rel="stylesheet" type="text/css" id="dark-style">
-    <link href="~/css/print.css" rel="stylesheet" type="text/css">
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/js/site.js"></script>
+    <link href="assets/css/vendor/responsive.bootstrap5.css" rel="stylesheet" type="text/css">
+    <link href="assets/images/favicon.ico" rel="shortcut icon">
+    <link href="assets/css/vendor/jquery-jvectormap-1.2.2.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" id="light-style" disabled="disabled">
+    <link href="assets/css/app-dark.min.css" rel="stylesheet" type="text/css" id="dark-style">
+    <link href="css/print.css" rel="stylesheet" type="text/css">
+    <script src="lib/jquery/dist/jquery.min.js"></script>
+    <script src="js/site.js"></script>
 
     <script>
         let CID = `@Repo.Session.CompanyId`;
@@ -35,7 +35,7 @@
                     <div class="container-fluid">
                         <a asp-area="Admin" asp-controller="Home" asp-action="Index" class="topnav-logo">
                             <span class="topnav-logo-lg">
-                                <img src="~/assets/images/adminlogo_it.png" alt="">
+                                <img src="assets/images/adminlogo_it.png" alt="">
                             </span>
                         </a>
 
@@ -44,24 +44,24 @@
 
                             <li class="dropdown notification-list topbar-dropdown d-none d-lg-block">
                                 <a class="nav-link dropdown-toggle arrow-none" data-bs-toggle="dropdown" id="topbar-languagedrop" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-                                    <img src="~/assets/images/flags/italy.png" alt="user-image" class="me-1" height="12"> <span class="align-middle">L'Italiano</span> <i class="mdi mdi-chevron-down"></i>
+                                    <img src="assets/images/flags/italy.jpg" alt="user-image" class="me-1" height="12"> <span class="align-middle">L'Italiano</span> <i class="mdi mdi-chevron-down"></i>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-end dropdown-menu-animated topbar-dropdown-menu" aria-labelledby="topbar-languagedrop">
 
                                     <a asp-area="" asp-controller="Null" asp-action="Maintenance_de" class="dropdown-item notify-item">
-                                        <img src="~/assets/images/flags/germany.jpg" alt="user-image" class="me-1" height="12"> <span class="align-middle">Deutsch</span>
+                                        <img src="assets/images/flags/germany.jpg" alt="user-image" class="me-1" height="12"> <span class="align-middle">Deutsch</span>
                                     </a>
 
                                     <a asp-area="" asp-controller="Null" asp-action="Maintenance_it" class="dropdown-item notify-item">
-                                        <img src="~/assets/images/flags/england.jpg" alt="user-image" class="me-1" height="12"> <span class="align-middle">English</span>
+                                        <img src="assets/images/flags/england.jpg" alt="user-image" class="me-1" height="12"> <span class="align-middle">English</span>
                                     </a>
 
                                     <a asp-area="" asp-controller="Null" asp-action="Maintenance_es" class="dropdown-item notify-item">
-                                        <img src="~/assets/images/flags/spain.jpg" alt="user-image" class="me-1" height="12"> <span class="align-middle">Español</span>
+                                        <img src="assets/images/flags/spain.jpg" alt="user-image" class="me-1" height="12"> <span class="align-middle">Español</span>
                                     </a>
 
                                     <a asp-area="" asp-controller="Null" asp-action="Maintenance_en" class="dropdown-item notify-item">
-                                        <img src="~/assets/images/flags/turkiye.png" alt="user-image" class="me-1" height="12"> <span class="align-middle">Türkçe</span>
+                                        <img src="assets/images/flags/turkiye.png" alt="user-image" class="me-1" height="12"> <span class="align-middle">Türkçe</span>
                                     </a>
 
                                 </div>
@@ -76,7 +76,7 @@
                             <li class="dropdown notification-list">
                                 <a class="nav-link dropdown-toggle nav-user arrow-none me-0" data-bs-toggle="dropdown" id="topbar-userdrop" href="#" role="button" aria-haspopup="true" aria-expanded="false">
                                     <span class="account-user-avatar">
-                                        <img src="~/assets/images/users/@Repo.Session.Image" alt="user-image" class="rounded-circle">
+                                        <img src="assets/images/users/@Repo.Session.Image" alt="user-image" class="rounded-circle">
                                     </span>
                                     <span>
                                         <span class="account-user-name">@Repo.Session.Name @Repo.Session.Surname</span>
@@ -123,7 +123,7 @@
                                 <ul class="navbar-nav">
                                     <li class="nav-item dropdown">
                                         <a class="nav-link dropdown-toggle arrow-none" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            <i class=" uil-building me-1"></i>servizi corporate<div class="arrow-down"></div>
+                                            <i class=" uil-building me-1"></i>Servizi Corporate<div class="arrow-down"></div>
                                         </a>
                                         <div class="dropdown-menu">
                                             <a asp-area="Admin" asp-controller="Home" asp-action="Company" class="dropdown-item">Operazioni Aziendali</a>
@@ -173,7 +173,7 @@
 
 
                 <div class="container-fluid">            
-                    @RenderBody()
+         
                 </div>
 
             </div>
@@ -194,10 +194,10 @@
             </footer>
         </div>
     </div>
-    <script src="~/assets/js/vendor.min.js"></script>
-    <script src="~/assets/js/app.min.js"></script>
-    <script src="~/assets/js/typeahead.bundle.js"></script>
-    <script src="~/js/other.js"></script>
+    <script src="assets/js/vendor.min.js"></script>
+    <script src="assets/js/app.min.js"></script>
+    <script src="assets/js/typeahead.bundle.js"></script>
+    <script src="js/other.js"></script>
 
     @await RenderSectionAsync("Scripts", required: false)
 </body>
