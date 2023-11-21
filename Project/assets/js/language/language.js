@@ -10,9 +10,9 @@ const LJS_nav_logout = { "Çıkış Yap": "tr", "Logout": "en", "Disconnettersi"
 const LJS_nav_light = { "Işıklar": "tr", "Lights": "en", "Luci": "it", "Luces": "es", "Lichter": "de" };
 
 //Table Name
-const LJS_order = { "Sıra": "tr", "Order": "en", "Fila": "it", "Fila": "es", "Reihe": "de" };
+const LJS_order = { "Sıra": "tr", "Row": "en", "Fila": "it", "Fila": "es", "Reihe": "de" };
 const LJS_invoiceNo = { "Fatura No": "tr", "Invoice No": "en", "Fattura No": "it", "Factura No": "es", "Rechnung Nr": "de" };
-const LJS_invoiceDate = { "Fatura Tarihi": "tr", "Invoice Date": "en", "Data Fattura": "it", "fecha de factura": "es", "Rechnungsdatum": "de" };
+const LJS_invoiceDate = { "Fatura Tarihi": "tr", "Invoice Date": "en", "Data Fattura": "it", "Fecha de Factura": "es", "Rechnungsdatum": "de" };
 const LJS_supplier = { "Tedarikçi": "tr", "Supplier": "en", "Fornitore": "it", "Proveedor": "es", "Lieferant": "de" };
 const LJS_print = { "Yazdır": "tr", "Print": "en", "Stampa": "it", "Imprimir": "es", "Druck": "de" };
 const LJS_product = { "Ürün": "tr", "Product": "en", "Prodotto": "it", "Producto": "es", "Produkt": "de" };
@@ -60,23 +60,23 @@ const LJS_B_cancel = { "Vazgeç": "tr", "Cancel": "en", "Cancellare": "it", "Can
 
 // Index Page
 const LJS_I_toDoTitle = { "Yapılacak İşler": "tr", "Things to Do": "en", "Cose da Fare": "it", "Cosas que Hacer": "es", "Einiges zu Tun": "de" };
-const LJS_I_toDoComploted = { "Tamamlanan ": "tr", " Completed: ": "en", "Completato": "it", "Completado": "es", "Abgeschlossen": "de" };
+const LJS_I_toDoComploted = { "Tamamlanan ": "tr", " Completed": "en", "Completato": "it", "Completado": "es", "Abgeschlossen": "de" };
 const LJS_I_toDoTotal = { " - Toplam: ": "tr", " - Total: ": "en", "Totale": "it", "Total": "es", "Insgesamt": "de" };
 const LJS_I_btnComploteDelete = { "Biten Görevleri Sil": "tr", "Delete Completed Tasks": "en", "Elimina le Attività Completate": "it", "Eliminar Tareas Completadas": "es", "Abgeschlossene Aufgaben Löschen": "de" };
 const LJS_I_placeholder = { "Bir Görev Ekle...": "tr", "Add a Task...": "en", "Aggiungere un'attività a...": "it", "Añadir una Tarea de...": "es", "Fügen Sie eine Aufgabe hinzu...": "de" };
-const LJS_I_toDofeedback = { "Boş görev eklenemez!": "tr", "Empty task cannot be added!": "en", "L'attività vuota non può essere aggiunta!": "it", "¡La tarea vacía no se puede agregar!": "es", "Leere Aufgabe kann nicht hinzugefügt werden!": "de" };
+const LJS_I_toDofeedback = { "Boş görev eklenemez!": "tr", "Empty tasks cannot be added!": "en", "L'attività vuota non può essere aggiunta!": "it", "¡La tarea vacía no se puede agregar!": "es", "Leere Aufgabe kann nicht hinzugefügt werden!": "de" };
 
 
 // Request Create Page
 const LJS_RC_btnCreateRequest = { "Talep Oluştur": "tr", "Create Request": "en", "Crea richiesta": "it", "Crear una Solicitud": "es", "Anforderung Erstellen": "de" };
 const LJS_RC_addProductTitle = { "Ürün Ekle": "tr", "Add Product": "en", "Aggiungi Prodotto": "it", "Agregar el Producto": "es", "Produkt Hinzufügen": "de" };
-const LJS_RC_titleBasket = { "Sepet": "tr", "Cart": "en", "Cesto": "it", "Carrito": "es", "Korb": "de" };
+const LJS_RC_titleBasket = { "Sepet": "tr", "Cart": "en", "Carello": "it", "Cesta": "es", "Einkaufswagen": "de" };
 
 
 
 
 // Global Option Title
-const LJS_selectProduct = { "Ürün Seç...": "tr", "Select Product...": "en", "Selezionare Prodotto": "it", "Seleccionar Producto": "es", "Produkt Auswählen...": "de" };
+const LJS_selectProduct = { "Ürün Seç...": "tr", "Select Product...": "en", "Selezionare Prodotto...": "it", "Seleccionar Producto...": "es", "Produkt Auswählen...": "de" };
 const LJS_selectCategory = { "Kategori Seç...": "tr", "Select Category...": "en", "Seleziona una Categoria di...": "it", "Seleccione la Categoría...": "es", "Kategorie Wählen...": "de" };
 const LJS_selectCompany = { "Şirket Seç...": "tr", "Select Company...": "en", "Seleziona Azienda Contatti...": "it", "Seleccione el Compañía...": "es", "Unternehmen Auswählen...": "de" };
 const LJS_selectDepartment = { "Departman Seç...": "tr", "Select Department...": "en", "Selezionare il Depatment...": "it", "Seleccione el Departamento...": "es", "Wählen Sie den Depatment...": "de" };
@@ -93,10 +93,10 @@ const LJS_labelFilterProduct = { "Filtre : Ürün": "tr", "Filter : Product": "e
 const LJS_labelRequest= { "Talep": "tr", "Request": "en", "Richiesta": "it", "Solicitud": "es", "Anfrage": "de" };
 const LJS_labelRequestedProducts = { "Talep Edilen Ürünler": "tr", "Requested Products": "en", "Prodotti Richiesti": "it", "Productos Solicitados": "es", "Angefragten Produkte": "de" };
 const LJS_labelDescription = { "Detay :": "tr", "Description": "en", "Descrizione": "it", "Descripción": "es", "Beschreibung": "de" };
-const LJS_labelSupplierList = { "Tedarikçi Listesi : Ürün": "tr", "Supplier List": "en", "Lista dei Fornitori": "it", "Lista de Proveedores": "es", "Lieferantenliste": "de" };
+const LJS_labelSupplierList = { "Tedarikçi Listesi": "tr", "Supplier List": "en", "Lista dei Fornitori": "it", "Lista de Proveedores": "es", "Lieferantenliste": "de" };
 
 
-const LJS_labelStockOperations= { "Stock İşlemleri": "tr", "Stock Operations": "en", "Operazioni di Stock": "it", "Operaciones Stock": "es", "Lagerbetrieb": "de" };
+const LJS_labelStockOperations= { "Stok İşlemleri": "tr", "Stock Operations": "en", "Operazioni di Stock": "it", "Operaciones Stock": "es", "Lagerbetrieb": "de" };
 const LJS_labelStockMovements = { "Stok Hareketleri": "tr", "Stock Movements": "en", "Movimenti di Stock": "it", "Movimientos de Stock": "es", "Lagerbewegungen": "de" };
 const LJS_labelInvoiceType = { "Fatura Tipi": "tr", "Invoice Type": "en", "Tipo di Fattura": "it", "Tipo de Factura": "es", "Rechnungsart": "de" };
 const LJS_labelSupplierCompany = { "Tedarikçi Firma": "tr", "Supplier Company": "en", "Azienda Fornitrice": "it", "Empresa Proveedora": "es", "Zulieferfirmen": "de" };
@@ -119,12 +119,12 @@ const LJS_labelInvoiceList = { "Fatura Listesi": "tr", "Invoice List": "en", "El
 const LJS_labelReportList = { "Rapor Listesi": "tr", "Report List": "en", "Lista delle Segnalazioni": "it", "Lista de Informes": "es", "Berichtsliste": "de" };
 const LJS_labelProduct = { "Ürün": "tr", "Product": "en", "Prodotto": "it", "Producto": "es", "Produkt": "de" };
 const LJS_labelCategory = { "Kategori": "tr", "Category": "en", "Categoria": "it", "Categoría": "es", "Kategorie": "de" };
-const LJS_labelRequestCreationDate = { "Talep Oluşturulma Tarihi": "tr", "Request Creation Date": "en", "Richiedi Data di Creazione": "it", "Solicitud Fecha de reación": "es", "Erstellungsdatum der Anfrage": "de" };
+const LJS_labelRequestCreationDate = { "Talep Oluşturulma Tarihi": "tr", "Request Creation Date": "en", "Richiedi Data di Creazione": "it", "Solicitud Fecha de Reación": "es", "Erstellungsdatum der Anfrage": "de" };
 
 
 const LJS_labelApprovedRequest = { "Onaylı Talepler": "tr", "Approved Requests": "en", "Richieste Approvata": "it", "Solicitudes Aprobada": "es", "Genehmigten Anträge": "de" };
 const LJS_labelPendingRequest = { "Bekleyen Talepler": "tr", "Pending Requests": "en", "Richieste in Sospeso": "it", "Solicitudes Pendiente": "es", "Ausstehende Anträge": "de" };
-const LJS_labelRejectedRequest = { "Reddedilen Talepler": "tr", "Rejected Requests": "en", "Respinto le Richieste": "it", "Solicitudes Rechazadas": "es", "zurückgewiesenen Anträge": "de" };
+const LJS_labelRejectedRequest = { "Reddedilen Talepler": "tr", "Rejected Requests": "en", "Respinto le Richieste": "it", "Solicitudes Rechazadas": "es", "Zurückgewiesenen Anträge": "de" };
 const LJS_labelPiece = { "Adet": "tr", "Piece": "en", "Pezzo": "it", "Pieza": "es", "Stück": "de" };
 
 
@@ -140,10 +140,10 @@ const LJS_labelQuantityUnit = { "Miktar/Birim": "tr", "Quantity/Unit": "en", "Qu
 const LJS_labelReadReport = { "Raporu Oku": "tr", "Read the Report": "en", "Leggere il Rapporto": "it", "Leer el Informe": "es", "Lesen Sie den Bericht": "de" };
 
 
-const LJS_labelStockEnterRemove = { "Stok Giriş/Çıkış": "tr", "Stock Enter/Remove": "en", "Ingresso/Uscita dello Stock": "it", "Entrada/Salida de Existencias": "es", "Wareneingang/Ausgang": "de" };
-const LJS_labelStockRemove = { "Stok Çıkış": "tr", "Stock Remove": "en", "Stock Rimuovi": "it", "Eliminación de Existencias": "es", "Lager Entfernen": "de" };
-const LJS_labelRow = { "Sıra": "tr", "Row": "en", "Fila": "it", "Fila": "es", "Reihe": "de" };
-const LJS_labelRequestDate = { "Talep Tarihi": "tr", "Request Date": "en", "": "it", "": "es", "": "de" };
+const LJS_labelStockEnterRemove = { "Stok Giriş/Çıkış": "tr", "Stock In/Out": "en", "Ingresso/Uscita dello Stock": "it", "Entrada/Salida de Stock": "es", "Lagerzugang/Abgang": "de" };
+const LJS_labelStockRemove = { "Stok Çıkış": "tr", "Stock Remove": "en", "Rimuovere Stock": "it", "Retirar Stock": "es", "Bestand Entfernen": "de" };
+const LJS_labelRow = { "Sıra": "tr", "Order": "en", "Fila": "it", "Fila": "es", "Reihe": "de" };
+const LJS_labelRequestDate = { "Talep Tarihi": "tr", "Request Date": "en", "Data di Richiesta": "it", "Fecha de Solicitud": "es", "Anforderungsdatum": "de" };
 
 
 const LJS_labelDate = { "Tarih": "tr", "Date": "en", "Data": "it", "Fecha": "es", "Datum": "de" };
@@ -158,9 +158,9 @@ const LJS_labelTransactions = {  "Yapılan İşlemler": "tr", "Transactions": "e
 const LJS_labelTransactionType = { "İşlem Tipi": "tr", "Transaction Type": "en", "Tipo di Transazione": "it", "Tipo de Transacción": "es", "Transaktionsart": "de" };
 const LJS_labelTransactionDate = { "İşlem Tarihi": "tr", "Transaction Date": "en", "Data della Transazione": "it", "Fecha de la Transacción": "es", "Transaktionsdatum": "de" };
 
-const LJS_labelReject = { "Reddet": "tr", "Reject": "en", "": "it", "": "es", "": "de" };
-const LJS_labelApprove = { "Onayla": "tr", "Approve": "en", "": "it", "": "es", "": "de" };
-const LJS_labelStockEntry = { "Stok Girişi": "tr", "Stock Entry": "en", "": "it", "": "es", "": "de" };
+const LJS_labelReject = { "Reddet": "tr", "Reject": "en", "Rifiutare": "it", "Rechazar": "es", "Ablehnen": "de" };
+const LJS_labelApprove = { "Onayla": "tr", "Approve": "en", "Approvare": "it", "Aprobar": "es", "Genehmigen": "de" };
+const LJS_labelStockEntry = { "Stok Girişi": "tr", "Stock Entry": "en", "Aggiungere Stock": "it", "Entrada de Stock": "es", "Bestand Hinzufügen": "de" };
 const LJS_labelRequestCreate = { "Talep Oluştur": "tr", "Create Request": "en", "Crea Richiesta": "it", "Crear una Solicitud": "es", "Anfrage Erstellen": "de" };
 
 const LJS_labelOfferCreate = {  "Teklif Gir": "tr", "Add Offer": "en", "Aggiungi Offerta": "it", "Añadir Oferta": "es", "Angebot Hinzufügen": "de" };
@@ -180,8 +180,8 @@ const LJS_labelCodeVerificationErrorMessage = { "Girmiş olduğunuz kod yanlış
 
 const LJS_labelCodeVerificationSuccessMessage = { "Kod Doğrulama İşlemi Başarılı.": "tr", "Code Verification Process Successful.": "en", "Processo di Verifica del Codice Successo.": "it", "Proceso de Verificación de Código Exitoso.": "es", "Code Verifizierung Prozess Erfolgreich.": "de" };
 const LJS_labelErrorMessage = { "İşlem Sırasında Hata Oluştu.": "tr", "Error Occurred During Operation.": "en", "Errore Verificato Durante il Funzionamento.": "it", "Error Ocurrido Durante la Operación.": "es", "Es ist ein Fehler Aufgetreten.": "de" };
-const LJS_labelSuccessMessage = { "İşlem Başarılı": "tr", "Transaction Was Successful": "en", "La Transazione Ha Avuto Successo": "it", "Transacción Se Realizó Correctamente": "es", "Transaktion Erfolgreich War": "de" };
-const LJS_labelMailVerificationErrorMessage = { "ePosta Adresi Doğrulanamadı.": "tr", "eMail Address Can Not Be Verified": "en", "L'indirizzo eMail non può Essere Verificato": "it", "No se Puede Verificar la Dirección de Correo Electrónico": "es", "E-Mail-Adresse Kann Nicht Überprüft Werden": "de" };
+const LJS_labelSuccessMessage = { "İşlem Başarılı": "tr", "Transaction Successful": "en", "La Transazione Ha Avuto Successo": "it", "Transacción Se Realizó Correctamente": "es", "Transaktion Erfolgreich War": "de" };
+const LJS_labelMailVerificationErrorMessage = { "ePosta Adresi Doğrulanamadı.": "tr", "eMail Address Can Not Be Verified": "en", "L'indirizzo Posta Elettronica non può Essere Verificato": "it", "No se Puede Verificar la Dirección de Correo Electrónico": "es", "E-Mail-Adresse Kann Nicht Überprüft Werden": "de" };
 
 const LJS_labelError = { "Hata": "tr", "Error": "en", "Errore": "it", "Error": "es", "Fehler": "de" };
 const LJS_labelSuccess = { "Başarılı": "tr", "Success": "en", "Successo": "it", "Écito": "es", "Erfolg": "de" };
